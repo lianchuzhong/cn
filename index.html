@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="中文学习网提供从拼音、汉字到日常对话的系统入门课程，并支持词汇收藏与学习进度记录。">
+  <meta name="theme-color" content="#f7f2e8">
+  <title>中文学习网｜从第一声问候开始</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="中文学习网首页">
+        <span class="brand-mark" aria-hidden="true">中</span>
+        <span class="brand-name">中文学习网</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">打开导航菜单</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="主要导航" data-nav>
+        <a href="#courses">学习路径</a>
+        <a href="#practice">每日练习</a>
+        <a href="#vocabulary">精选词汇</a>
+        <a href="#method">学习方法</a>
+      </nav>
+      <a class="header-cta" href="#courses">开始学习</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home">
+      <div class="hero-shape hero-shape-one" aria-hidden="true"></div>
+      <div class="hero-shape hero-shape-two" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow"><span></span>从第一声问候开始</p>
+          <h1>让中文，<br><strong>成为你打开世界的钥匙。</strong></h1>
+          <p class="hero-text">把零散知识变成每天都能完成的进步。无需基础，跟随清晰路径，在听、说、读、写中自然掌握中文。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#courses">
+              免费开始学习
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="button button-secondary" href="#practice">试听今日课程</a>
+          </div>
+          <div class="hero-proof" role="group" aria-label="学习特色">
+            <div class="proof-avatars" aria-hidden="true"><span>拼</span><span>词</span><span>话</span></div>
+            <p><strong>轻量、好记、随时学</strong><br>无需注册，学习进度自动保存在本机</p>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-reveal data-reveal-delay="1" role="group" aria-label="今日学习卡片">
+          <div class="visual-grid" aria-hidden="true"></div>
+          <div class="floating-label label-pinyin" aria-hidden="true">Pīn yīn</div>
+          <div class="floating-label label-character" aria-hidden="true">汉字</div>
+          <div class="floating-label label-dialogue" aria-hidden="true">日常对话</div>
+          <div class="character-stage">
+            <div class="stage-ring" aria-hidden="true"></div>
+            <div class="character-card">
+              <div class="card-topline"><span>今日汉字</span><span>01 / 01</span></div>
+              <div class="hero-character" aria-hidden="true">中</div>
+              <div class="character-pinyin">zhōng</div>
+              <div class="tone-row" role="img" aria-label="zhōng，第一声">
+                <span class="tone active">1</span>
+                <span class="tone">2</span>
+                <span class="tone">3</span>
+                <span class="tone">4</span>
+              </div>
+              <div class="meaning-row"><span>中间；中心</span><button class="icon-button light" type="button" data-speak="中。中间，中心。" aria-label="朗读“中”"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15 9.5a4 4 0 0 1 0 5M18 7a7 7 0 0 1 0 10"/></svg></button></div>
+            </div>
+          </div>
+          <div class="daily-card">
+            <div class="daily-icon" aria-hidden="true">话</div>
+            <div><span>每日一句</span><strong>很高兴认识你！</strong><small>Nǐ hěn gāoxìng rènshi nǐ!</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="container hero-stats" data-reveal data-reveal-delay="2">
+        <div><strong>4</strong><span>条清晰学习路径</span></div>
+        <div><strong>16</strong><span>节循序入门课程</span></div>
+        <div><strong>12</strong><span>个高频精选词汇</span></div>
+        <div><strong>1</strong><span>个每日学习习惯</span></div>
+      </div>
+    </section>
+
+    <section class="section courses-section" id="courses">
+      <div class="container">
+        <div class="section-heading split-heading" data-reveal>
+          <div>
+            <p class="eyebrow"><span></span>学习路径</p>
+            <h2>不贪多，一步一步学会中文</h2>
+          </div>
+          <div class="course-progress-summary">
+            <div><span>总体进度</span><strong data-progress-label>0%</strong></div>
+            <div class="progress-track"><span data-progress-bar></span></div>
+          </div>
+        </div>
+
+        <div class="course-grid">
+          <article class="course-card course-pink" data-reveal>
+            <div class="course-number">01</div>
+            <div class="course-icon" aria-hidden="true">ā</div>
+            <span class="course-tag">零基础</span>
+            <h3>拼音入门</h3>
+            <p>认识声母、韵母和声调，建立准确发音基础。</p>
+            <div class="course-meta"><span>4 节课</span><span>约 35 分钟</span></div>
+            <button class="course-action" type="button" data-open-course="pinyin"><span>开始课程</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          </article>
+
+          <article class="course-card course-yellow" data-reveal data-reveal-delay="1">
+            <div class="course-number">02</div>
+            <div class="course-icon" aria-hidden="true">文</div>
+            <span class="course-tag">核心基础</span>
+            <h3>汉字起步</h3>
+            <p>从笔画、结构到组词，理解汉字背后的规律。</p>
+            <div class="course-meta"><span>4 节课</span><span>约 45 分钟</span></div>
+            <button class="course-action" type="button" data-open-course="character"><span>开始课程</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          </article>
+
+          <article class="course-card course-green" data-reveal data-reveal-delay="2">
+            <div class="course-number">03</div>
+            <div class="course-icon" aria-hidden="true">话</div>
+            <span class="course-tag">开口表达</span>
+            <h3>日常对话</h3>
+            <p>在真实场景中练习问候、购物、问路和自我介绍。</p>
+            <div class="course-meta"><span>4 节课</span><span>约 50 分钟</span></div>
+            <button class="course-action" type="button" data-open-course="dialogue"><span>开始课程</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          </article>
+
+          <article class="course-card course-blue" data-reveal data-reveal-delay="3">
+            <div class="course-number">04</div>
+            <div class="course-icon" aria-hidden="true">听</div>
+            <span class="course-tag">综合提升</span>
+            <h3>听力练习</h3>
+            <p>从慢速材料开始，训练关键信息和语感判断。</p>
+            <div class="course-meta"><span>4 节课</span><span>约 40 分钟</span></div>
+            <button class="course-action" type="button" data-open-course="listening"><span>开始课程</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section practice-section" id="practice">
+      <div class="container practice-grid">
+        <div class="phrase-panel" data-reveal>
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow light"><span></span>每日一句</p>
+              <h2>今天开口说中文</h2>
+            </div>
+            <span class="phrase-count" data-phrase-count>1 / 5</span>
+          </div>
+          <div class="phrase-content" aria-live="polite">
+            <p class="phrase-hint" data-phrase-hint>用于第一次见面时的友好表达</p>
+            <blockquote data-phrase-chinese>很高兴认识你！</blockquote>
+            <p class="phrase-pinyin" data-phrase-pinyin>Nǐ hěn gāoxìng rènshi nǐ!</p>
+            <p class="phrase-translation" data-phrase-translation>Nice to meet you!</p>
+          </div>
+          <div class="phrase-controls">
+            <button class="sound-button" type="button" data-speak-phrase>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15 9.5a4 4 0 0 1 0 5M18 7a7 7 0 0 1 0 10"/></svg>
+              听发音
+            </button>
+            <div class="phrase-navigation">
+              <button class="round-button" type="button" data-previous-phrase aria-label="上一句"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+              <button class="round-button" type="button" data-next-phrase aria-label="下一句"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+            </div>
+          </div>
+          <div class="panel-decoration" aria-hidden="true">你好</div>
+        </div>
+
+        <div class="quiz-panel" data-reveal data-reveal-delay="1">
+          <div class="quiz-header">
+            <div>
+              <p class="eyebrow"><span></span>快速测验</p>
+              <h2>检验一下学习成果</h2>
+            </div>
+            <div class="quiz-score"><span>得分</span><strong data-quiz-score>0 / 3</strong></div>
+          </div>
+          <div class="quiz-body" data-quiz-body>
+            <p class="quiz-kicker" data-quiz-kicker>第 1 题 · 选择正确含义</p>
+            <h3 data-quiz-question>“你好”是什么意思？</h3>
+            <div class="quiz-options" data-quiz-options></div>
+            <p class="quiz-feedback" data-quiz-feedback aria-live="polite">选择一个答案开始测验。</p>
+          </div>
+          <div class="quiz-footer">
+            <div class="quiz-dots" data-quiz-dots role="group" aria-label="测验进度"></div>
+            <button class="button button-dark" type="button" data-quiz-next disabled>下一题<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section vocabulary-section" id="vocabulary">
+      <div class="container">
+        <div class="section-heading vocabulary-heading" data-reveal>
+          <div>
+            <p class="eyebrow"><span></span>精选词汇</p>
+            <h2>把高频词真正记下来</h2>
+            <p>听发音、看例句，再收藏你掌握的词。</p>
+          </div>
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+            <label class="sr-only" for="vocabulary-search">搜索词汇</label>
+            <input id="vocabulary-search" type="search" placeholder="搜索汉字、拼音或释义" autocomplete="off" data-vocabulary-search>
+          </div>
+        </div>
+        <div class="filter-row" data-vocabulary-filters role="group" aria-label="词汇分类">
+          <button class="filter-button active" type="button" data-filter="全部">全部 <span>12</span></button>
+          <button class="filter-button" type="button" data-filter="基础">基础</button>
+          <button class="filter-button" type="button" data-filter="日常">日常</button>
+          <button class="filter-button" type="button" data-filter="动作">动作</button>
+        </div>
+        <div class="vocabulary-grid" data-vocabulary-grid></div>
+        <p class="empty-state" data-vocabulary-empty hidden>没有找到相关词汇，换个关键词试试。</p>
+      </div>
+    </section>
+
+    <section class="section method-section" id="method">
+      <div class="container">
+        <div class="section-heading centered-heading" data-reveal>
+          <p class="eyebrow centered"><span></span>学习方法</p>
+          <h2>有效的学习，藏在简单习惯里</h2>
+        </div>
+        <div class="method-grid">
+          <article class="method-card" data-reveal>
+            <span class="method-step">01</span>
+            <div class="method-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13Z"/><path d="M8 8h8M8 12h5"/></svg></div>
+            <h3>先理解，再记忆</h3>
+            <p>每个知识点都放入真实语境，让新词有画面、有用途。</p>
+          </article>
+          <article class="method-card featured" data-reveal data-reveal-delay="1">
+            <span class="method-step">02</span>
+            <div class="method-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="4"/></svg></div>
+            <h3>每天开口十分钟</h3>
+            <p>用每日一句和角色对话保持语感，不让已经学过的内容生疏。</p>
+          </article>
+          <article class="method-card" data-reveal data-reveal-delay="2">
+            <span class="method-step">03</span>
+            <div class="method-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></div>
+            <h3>及时复习和反馈</h3>
+            <p>课程进度和生词本保存在本机，随时回来继续你的学习旅程。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-section">
+      <div class="container closing-card" data-reveal>
+        <div class="closing-copy">
+          <p class="eyebrow light"><span></span>从今天开始</p>
+          <h2>每天十分钟，让中文成为你的新技能</h2>
+          <p>无需注册，跟着第一条学习路径，完成你的第一句中文。</p>
+        </div>
+        <a class="button button-white" href="#courses">开始第一课<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <div class="closing-character" aria-hidden="true">学</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">中</span><span class="brand-name">中文学习网</span></a>
+      <p>让中文学习简单、持续、有趣。</p>
+      <p>© <span data-current-year></span> 中文学习网</p>
+    </div>
+  </footer>
+
+  <dialog class="course-dialog" data-course-dialog>
+    <div class="dialog-header">
+      <div>
+        <p class="eyebrow"><span></span>课程目录</p>
+        <h2 data-dialog-title>拼音入门</h2>
+      </div>
+      <button class="dialog-close" type="button" data-dialog-close aria-label="关闭课程目录"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    </div>
+    <p class="dialog-description" data-dialog-description></p>
+    <div class="lesson-list" data-lesson-list></div>
+    <div class="dialog-footer">
+      <p data-dialog-progress>已完成 0 / 4 课</p>
+      <button class="button button-primary" type="button" data-close-dialog>返回学习路径</button>
+    </div>
+  </dialog>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+</body>
+</html>
