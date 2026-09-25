@@ -1,0 +1,41 @@
+name: 中文文字解释
+description: 提交任意国家或地区的文字，请管理员用中文解释。
+title: "[文字解释] "
+labels:
+  - 待解释
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢提交文字解释请求。内容将公开保存在 GitHub Issue 中，请勿填写密码、证件号码或其他敏感信息。
+  - type: textarea
+    id: original-text
+    attributes:
+      label: 需要解释的原文
+      description: 可以粘贴任何语言、文字系统、符号或不完整片段。
+      placeholder: 在这里填写需要解释的原文……
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 补充说明
+      description: 可以说明来源、使用场景或你最希望了解的内容。
+      placeholder: 例如：这段文字的意思、读法或来源……
+    validations:
+      required: false
+  - type: input
+    id: submitter
+    attributes:
+      label: 你的称呼
+      description: 可不填写；如不希望公开身份，可以保持空白。
+      placeholder: 例如：小林
+    validations:
+      required: false
+  - type: checkboxes
+    id: public-confirmation
+    attributes:
+      label: 公开确认
+      options:
+        - label: 我确认此内容可以公开，且不包含密码、证件号码等敏感信息。
+          required: true
