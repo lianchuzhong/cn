@@ -615,6 +615,67 @@ function setupVocabulary() {
   renderVocabulary();
 }
 
+function escapeIssueText(value) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/@/g, "&#64;");
+}
+
+function buildIssueBody(text, submitter, context) {
+  const sections = [
+    "## 原文",
+    "",
+    "<pre lang=\"text\">",
+    escapeIssueText(text),
+    "</pre>",
+    "",
+    "## 想了解的内容",
+    "",
+    context ? escapeIssueText(context) : "希望提供这段文字的中文含义、读法或使用说明。",
+    "",
+    "## 提交者称呼",
+    "",
+    submitter ? escapeIssueText(submitter) : "未提供",
+    "",
+    "---",
+    "本请求由中文学习网提交。管理员将在此 Issue 中公开补充中文解释。"
+  ];
+  return sections.join("\n");
+}
+
+function setupSubmissionForm() {
+  const form = document.querySelector("[data-submission-form]");
+  const originalText = form.querySelector("[data-original-text]");
+  const characterCount = form.querySelector("[data-character-count]");
+
+  const updateCount = () => {
+    characterCount.textContent = String(originalText.value.length);
+  };
+
+  originalText.addEventListener("input", updateCount);
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+
+    const text = originalText.value.trim();
+    const submitter = form.elements.submitter.value.trim();
+    const context = form.elements.context.value.trim();
+    const excerpt = text.replace(/\s+/g, " ").slice(0, 36);
+    const issueTitle = excerpt ? `中文解释请求：${excerpt}` : "中文解释请求";
+    const issueUrl = new URL(form.action);
+    issueUrl.searchParams.set("title", issueTitle);
+    issueUrl.searchParams.set("body", buildIssueBody(text, submitter, context));
+
+    const issueWindow = window.open(issueUrl.toString(), "_blank");
+    if (issueWindow) issueWindow.opener = null;
+    showToast("已打开 GitHub，请确认内容后提交");
+  });
+
+  updateCount();
+}
+
 function setupMiscellaneous() {
   document.querySelector("[data-current-year]").textContent = new Date().getFullYear();
   if ("speechSynthesis" in window && "SpeechSynthesisUtterance" in window) {
@@ -628,4 +689,5 @@ setupCourses();
 setupPhrases();
 setupQuiz();
 setupVocabulary();
+setupSubmissionForm();
 setupMiscellaneous();
