@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="中文学习网提供从拼音、汉字到日常对话的系统入门课程，并支持词汇收藏与学习进度记录。">
+  <meta name="description" content="中文学习网提供从拼音、汉字到日常对话的系统入门课程，并接收各国文字的公开中文解释请求。">
   <meta name="theme-color" content="#f7f2e8">
   <title>中文学习网｜从第一声问候开始</title>
   <link rel="stylesheet" href="styles.css">
@@ -27,6 +27,7 @@
         <a href="#courses">学习路径</a>
         <a href="#practice">每日练习</a>
         <a href="#vocabulary">精选词汇</a>
+        <a href="#submit">文字解释</a>
         <a href="#method">学习方法</a>
       </nav>
       <a class="header-cta" href="#courses">开始学习</a>
@@ -222,6 +223,62 @@
       </div>
     </section>
 
+    <section class="section submission-section" id="submit">
+      <div class="container">
+        <div class="section-heading centered-heading" data-reveal>
+          <p class="eyebrow centered"><span></span>文字解释</p>
+          <h2>任何文字，都值得被理解</h2>
+          <p>可以提交任何国家或地区使用的文字。内容会进入网站的 GitHub 仓库，由管理员公开补充中文解释。</p>
+        </div>
+        <div class="submission-shell" data-reveal>
+          <div class="submission-guide">
+            <span class="submission-kicker">中文解释请求</span>
+            <h3>三步获得中文说明</h3>
+            <ol class="submission-steps">
+              <li><span>1</span><div><strong>填写原文</strong><p>粘贴需要解释的文字，也可以补充语境。</p></div></li>
+              <li><span>2</span><div><strong>登录 GitHub 提交</strong><p>表单会打开已预填的新 Issue 页面，不会读取或保存你的账号信息。</p></div></li>
+              <li><span>3</span><div><strong>查看中文解释</strong><p>管理员会在同一 Issue 中公开回复，并在完成后添加“已解释”标签。</p></div></li>
+            </ol>
+            <div class="submission-contact">
+              <div class="contact-avatar" aria-hidden="true">LC</div>
+              <div><span>网站维护者</span><strong>lianchuzhong</strong><small>公开联系方式：GitHub 主页</small></div>
+              <a href="https://github.com/lianchuzhong" target="_blank" rel="noopener noreferrer" aria-label="打开维护者的 GitHub 主页"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M10 14 19 5M19 14v5H5V5h5"/></svg></a>
+            </div>
+          </div>
+
+          <form class="submission-form" action="https://github.com/lianchuzhong/cn/issues/new" method="get" target="_blank" data-submission-form>
+            <input type="hidden" name="title" value="中文解释请求">
+            <div class="form-field">
+              <div class="form-label-row">
+                <label for="original-text">需要解释的原文 <span class="required">必填</span></label>
+                <small><output data-character-count>0</output> / 3000</small>
+              </div>
+              <textarea id="original-text" name="body" rows="8" maxlength="3000" required placeholder="可以粘贴任何语言、文字系统或特殊符号……" data-original-text></textarea>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="submitter-name">你的称呼 <span class="optional">选填</span></label>
+                <input id="submitter-name" name="submitter" type="text" maxlength="60" autocomplete="nickname" placeholder="例如：小林">
+              </div>
+              <div class="form-field">
+                <label for="submission-context">想了解什么 <span class="optional">选填</span></label>
+                <input id="submission-context" name="context" type="text" maxlength="160" placeholder="例如：这段文字的意思和来源">
+              </div>
+            </div>
+            <label class="consent-field">
+              <input type="checkbox" name="public" value="yes" required>
+              <span>我确认这段内容可以公开保存在 GitHub Issue，且不包含密码、证件号码等敏感信息。</span>
+            </label>
+            <button class="button button-primary submission-submit" type="submit">
+              前往 GitHub 提交
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M10 14 19 5M19 14v5H5V5h5"/></svg>
+            </button>
+            <p class="form-notice"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v5c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6l-8-3Z"/><path d="m9 12 2 2 4-5"/></svg>仓库令牌不会发送到浏览器，提交内容只进入公开 Issue。</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <section class="section method-section" id="method">
       <div class="container">
         <div class="section-heading centered-heading" data-reveal>
@@ -268,6 +325,7 @@
     <div class="container footer-inner">
       <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">中</span><span class="brand-name">中文学习网</span></a>
       <p>让中文学习简单、持续、有趣。</p>
+      <a class="footer-contact" href="https://github.com/lianchuzhong" target="_blank" rel="noopener noreferrer">联系：GitHub 主页</a>
       <p>© <span data-current-year></span> 中文学习网</p>
     </div>
   </footer>
