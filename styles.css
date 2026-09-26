@@ -1635,7 +1635,7 @@ svg {
 
 .submission-contact {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto auto;
   margin-top: 34px;
   padding-top: 25px;
   align-items: center;
@@ -1984,6 +1984,12 @@ svg {
 
 .footer-inner p {
   margin: 0;
+}
+
+.footer-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
 }
 
 .footer-contact {
@@ -2674,7 +2680,7 @@ svg {
     width: 100%;
   }
 
-  .footer-contact {
+  .footer-contacts {
     order: 3;
   }
 }
